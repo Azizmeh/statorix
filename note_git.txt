@@ -1,0 +1,8 @@
+Créer le dépot statorix dans github.com
+git remote  add origin https://github.com/Azizmeh/statorix.git
+cd ~/statorix
+git init
+git add backend
+git add les autres repertoires
+git commit -m "First commit"
+git push --set-upstream origin master

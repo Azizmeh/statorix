@@ -1,0 +1,15 @@
+DROP TABLE if exists etablissement;
+drop table if exists activite_dim;
+drop table if exists classe_activite_dim;
+drop table if exists groupe_activite_dim;
+drop table if exists division_activite_dim;
+drop table if exists section_activite_dim;
+drop table if exists categorie_juridique_dim;
+drop table if exists classe_categorie_juridique_dim;
+drop table if exists super_classe_categorie_juridique_dim;
+drop table if exists categorie_entreprise_dim;
+drop table if exists tranche_effectif_dim;
+drop table if exists departement_dim;
+drop table if exists region_dim;
+drop table if exists pays_dim;
+drop table if exists data_periode;

@@ -1,0 +1,93 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:26.3.9.8
+    container_name: clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - ./data/clickhouse:/var/lib/clickhouse
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_DB: statorix
+      POSTGRES_USER: statorix
+      POSTGRES_PASSWORD: statorix_pwd
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.1
+    container_name: keycloak
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+
+      KC_DB: postgres
+      KC_DB_URL_HOST: postgres
+      KC_DB_URL_PORT: 5432
+      KC_DB_URL_DATABASE: keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: keycloak_pwd
+
+      KC_HTTP_ENABLED: "true"
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 80
+      KC_HTTP_RELATIVE_PATH: /
+
+      KC_HOSTNAME_STRICT: "false"
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+      KC_PROXY_HEADERS: xforwarded
+
+    volumes:
+      - ./keycloak/themes/statorix:/opt/keycloak/themes/statorix
+
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  superset:
+    build: ./superset
+    container_name: superset
+    depends_on:
+      - postgres
+    environment:
+      SUPERSET_CONFIG_PATH: /app/pythonpath/superset_config.py
+    volumes:
+      - ./data/superset_home:/app/superset_home
+    ports:
+      - "8088:8088"
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.29.8
+    container_name: nginx
+    depends_on:
+      - backend
+      - keycloak
+      - superset
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx:/usr/share/nginx/html
+    ports:
+      - "80:80"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  clickhouse_data:
+  superset_home:
+  keycloak_data:

@@ -1,0 +1,15 @@
+statorix/
+│── docker-compose.yml
+│── .env.example
+│
+├── nginx/
+│   └── nginx.conf
+│
+├── backend/
+│   └── Dockerfile
+│
+├── superset/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── superset_config.py
+│   └── init.sh

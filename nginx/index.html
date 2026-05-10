@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statorix - Dashboards Base Sirene</title>
+    <link rel="icon" type="image/svg+xml" href="/statorix_icon.svg">
+    <link rel="stylesheet" href="/statorix.css">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html">
+            <img src="/statorix_logo.svg" width="350" alt="Statorix Logo">
+        </a>
+        <div id="auth-zone">
+            <a class="btn-connect" href="http://localhost:8088/login/keycloak">Se connecter</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div style="display:flex; flex-direction:column; gap:24px; max-width:600px; margin:0 auto;">
+
+            <div class="card">
+                <h2>Dashboards Base Sirene</h2>
+                <div class="links">
+                    <a href="http://localhost:8088/superset/dashboard/p/OGzeYlNE38j/">
+                        Analyse régionale
+                    </a>
+                    <a href="http://localhost:8088/superset/dashboard/p/Oogk6bXkzAL/">
+                        Analyse temporelle
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Référentiel</h2>
+                <div class="links">
+                    <a href="/activites.html">
+                        Activités (NAF REV2)
+                    </a>
+                    <a href="/categories_juridiques.html">
+                        Catégories juridiques
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <a href="http://localhost/infos_donnees.html">Informations sur les données</a>
+        |
+        <a href="http://localhost/contact.html">Contact</a>
+    </footer>
+    <script>
+        fetch('/superset-api/v1/me/', { credentials: 'include' })
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.result && data.result.username) {
+                    const user = data.result;
+                    const name = (user.first_name + ' ' + user.last_name).trim() || user.username;
+                    document.getElementById('auth-zone').innerHTML = `
+                        <span>👤 ${name}</span>
+                        <a class="btn-logout" href="http://localhost:8088/logout/">Se déconnecter</a>
+                    `;
+                }
+            })
+            .catch(() => { });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Activités</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f7f9fc;
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        #search {
+            width: 400px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .tree ul {
+            list-style: none;
+            padding-left: 25px;
+        }
+
+        .tree li {
+            margin: 6px 0;
+        }
+
+        .node {
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .node:hover {
+            background: #e0ecff;
+        }
+
+        .code {
+            color: #666;
+            font-size: 12px;
+            margin-right: 6px;
+        }
+
+        .children {
+            display: none;
+        }
+
+        .open>.children {
+            display: block;
+        }
+
+        .arrow {
+            display: inline-block;
+            width: 20px;
+            color: #2563eb;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Arborescence des activités</h1>
+
+    <input id="search" placeholder="Recherche...">
+
+    <div id="tree" class="tree"></div>
+
+    <script>
+        async function loadXML() {
+            const response = await fetch("activites.xml");
+            const text = await response.text();
+            const xml = new DOMParser().parseFromString(text, "text/xml");
+
+            const root = xml.documentElement;
+            const tree = document.getElementById("tree");
+
+            tree.appendChild(renderChildren(root.children));
+        }
+
+        function renderChildren(nodes) {
+            const ul = document.createElement("ul");
+
+            [...nodes].forEach(node => {
+                ul.appendChild(renderNode(node));
+            });
+
+            return ul;
+        }
+
+        function renderNode(node) {
+            const li = document.createElement("li");
+
+            const hasChildren = node.children.length > 0;
+
+            const div = document.createElement("div");
+            div.className = "node";
+
+            const arrow = document.createElement("span");
+            arrow.className = "arrow";
+            arrow.textContent = hasChildren ? "▶" : "•";
+
+            const code = document.createElement("span");
+            code.className = "code";
+            code.textContent = node.getAttribute("code");
+
+            const label = document.createElement("span");
+            label.textContent = node.getAttribute("libelle");
+
+            div.appendChild(arrow);
+            div.appendChild(code);
+            div.appendChild(label);
+
+            li.appendChild(div);
+
+            if (hasChildren) {
+                const children = renderChildren(node.children);
+                children.className = "children";
+                li.appendChild(children);
+
+                div.onclick = () => {
+                    li.classList.toggle("open");
+                    arrow.textContent =
+                        li.classList.contains("open") ? "▼" : "▶";
+                };
+            }
+
+            return li;
+        }
+
+        document.getElementById("search").addEventListener("input", e => {
+            const value = e.target.value.toLowerCase();
+
+            document.querySelectorAll(".node").forEach(node => {
+                const text = node.textContent.toLowerCase();
+                node.parentElement.style.display =
+                    text.includes(value) ? "" : "none";
+            });
+        });
+
+        loadXML();
+    </script>
+
+</body>
+
+</html>

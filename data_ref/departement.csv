@@ -1,0 +1,335 @@
+departement;region;pays
+Allier;Auvergne-Rhône-Alpes;France
+Loire-Atlantique;Pays de la Loire;France
+Aube;Grand Est;France
+Doubs;Bourgogne-Franche-Comté;France
+Aude;Occitanie;France
+Bas-Rhin;Grand Est;France
+Cher;Centre-Val de Loire;France
+Morbihan;Bretagne;France
+Loire;Auvergne-Rhône-Alpes;France
+Hautes-Alpes;Provence-Alpes-Côte d'Azur;France
+Marne;Grand Est;France
+Nord;Hauts-de-France;France
+Vaucluse;Provence-Alpes-Côte d'Azur;France
+Seine-et-Marne;Île-de-France;France
+Haute-Savoie;Auvergne-Rhône-Alpes;France
+Finistère;Bretagne;France
+Gard;Occitanie;France
+Côtes-d'Armor;Bretagne;France
+Haute-Corse;Corse;France
+Corse-du-Sud;Corse;France
+Vienne;Nouvelle-Aquitaine;France
+Territoire de Belfort;Bourgogne-Franche-Comté;France
+Loiret;Centre-Val de Loire;France
+Dordogne;Nouvelle-Aquitaine;France
+Ain;Auvergne-Rhône-Alpes;France
+Maine-et-Loire;Pays de la Loire;France
+Val-d'Oise;Île-de-France;France
+Ardennes;Grand Est;France
+Pyrénées-Orientales;Occitanie;France
+Creuse;Nouvelle-Aquitaine;France
+Puy-de-Dôme;Auvergne-Rhône-Alpes;France
+Haute-Garonne;Occitanie;France
+Gironde;Nouvelle-Aquitaine;France
+Somme;Hauts-de-France;France
+Pyrénées-Atlantiques;Nouvelle-Aquitaine;France
+Charente-Maritime;Nouvelle-Aquitaine;France
+Cantal;Auvergne-Rhône-Alpes;France
+Ardèche;Auvergne-Rhône-Alpes;France
+Eure;Normandie;France
+Aisne;Hauts-de-France;France
+Haut-Rhin;Grand Est;France
+Haute-Vienne;Nouvelle-Aquitaine;France
+Gers;Occitanie;France
+Val-de-Marne;Île-de-France;France
+Eure-et-Loir;Centre-Val de Loire;France
+Côte-d'Or;Bourgogne-Franche-Comté;France
+Ariège;Occitanie;France
+Hérault;Occitanie;France
+Bouches-du-Rhône;Provence-Alpes-Côte d'Azur;France
+Sarthe;Pays de la Loire;France
+Landes;Nouvelle-Aquitaine;France
+Hautes-Pyrénées;Occitanie;France
+Aveyron;Occitanie;France
+Vendée;Pays de la Loire;France
+Mayenne;Pays de la Loire;France
+Calvados;Normandie;France
+Essonne;Île-de-France;France
+Deux-Sèvres;Nouvelle-Aquitaine;France
+Drôme;Auvergne-Rhône-Alpes;France
+Seine-Saint-Denis;Île-de-France;France
+Seine-Maritime;Normandie;France
+Isère;Auvergne-Rhône-Alpes;France
+Moselle;Grand Est;France
+Meuse;Grand Est;France
+Haute-Marne;Grand Est;France
+Haute-Loire;Auvergne-Rhône-Alpes;France
+Yonne;Bourgogne-Franche-Comté;France
+Orne;Normandie;France
+Lozère;Occitanie;France
+Alpes-Maritimes;Provence-Alpes-Côte d'Azur;France
+Tarn-et-Garonne;Occitanie;France
+Yvelines;Île-de-France;France
+Lot-et-Garonne;Nouvelle-Aquitaine;France
+Alpes-de-Haute-Provence;Provence-Alpes-Côte d'Azur;France
+Hauts-de-Seine;Île-de-France;France
+Lot;Occitanie;France
+Tarn;Occitanie;France
+Savoie;Auvergne-Rhône-Alpes;France
+Saône-et-Loire;Bourgogne-Franche-Comté;France
+Meurthe-et-Moselle;Grand Est;France
+Indre;Centre-Val de Loire;France
+Ille-et-Vilaine;Bretagne;France
+Paris;Île-de-France;France
+Var;Provence-Alpes-Côte d'Azur;France
+Nièvre;Bourgogne-Franche-Comté;France
+Jura;Bourgogne-Franche-Comté;France
+Rhône;Auvergne-Rhône-Alpes;France
+Indre-et-Loire;Centre-Val de Loire;France
+Pas-de-Calais;Hauts-de-France;France
+Charente;Nouvelle-Aquitaine;France
+Haute-Saône;Bourgogne-Franche-Comté;France
+Oise;Hauts-de-France;France
+Vosges;Grand Est;France
+Manche;Normandie;France
+Loir-et-Cher;Centre-Val de Loire;France
+Corrèze;Nouvelle-Aquitaine;France
+Guadeloupe;Guadeloupe;France
+Martinique;Martinique;France
+Guyane;Guyane;France
+La Réunion;La Réunion;France
+Mayotte;Mayotte;France
+Saint-Pierre et Miquelon;Saint-Pierre et Miquelon;France
+Saint--Barthélemy;Saint--Barthélemy;France
+Saint-Martin;Saint-Martin;France
+Polynésie Française;Polynésie française;France
+Monaco;Polynésie française;France
+Département générique pour France;Région générique pour France;France
+Département générique pour Danemark;Région générique pour Danemark;Danemark
+Département générique pour Islande;Région générique pour Islande;Islande
+Département générique pour Norvège;Région générique pour Norvège;Norvège
+Département générique pour Suède;Région générique pour Suède;Suède
+Département générique pour Finlande;Région générique pour Finlande;Finlande
+Département générique pour Estonie;Région générique pour Estonie;Estonie
+Département générique pour Lettonie;Région générique pour Lettonie;Lettonie
+Département générique pour Lituanie;Région générique pour Lituanie;Lituanie
+Département générique pour Allemagne;Région générique pour Allemagne;Allemagne
+Département générique pour Autriche;Région générique pour Autriche;Autriche
+Département générique pour Bulgarie;Région générique pour Bulgarie;Bulgarie
+Département générique pour Hongrie;Région générique pour Hongrie;Hongrie
+Département générique pour Liechtenstein;Région générique pour Liechtenstein;Liechtenstein
+Département générique pour Roumanie;Région générique pour Roumanie;Roumanie
+Département générique pour Tchéquie;Région générique pour Tchéquie;Tchéquie
+Département générique pour Slovaquie;Région générique pour Slovaquie;Slovaquie
+Département générique pour Bosnie-Herzégovine;Région générique pour Bosnie-Herzégovine;Bosnie-Herzégovine
+Département générique pour Croatie;Région générique pour Croatie;Croatie
+Département générique pour Monténégro;Région générique pour Monténégro;Monténégro
+Département générique pour Serbie;Région générique pour Serbie;Serbie
+Département générique pour Pologne;Région générique pour Pologne;Pologne
+Département générique pour Russie;Région générique pour Russie;Russie
+Département générique pour Albanie;Région générique pour Albanie;Albanie
+Département générique pour Grèce;Région générique pour Grèce;Grèce
+Département générique pour Italie;Région générique pour Italie;Italie
+Département générique pour Saint-Marin;Région générique pour Saint-Marin;Saint-Marin
+Département générique pour Vatican;Région générique pour Vatican;Vatican
+Département générique pour Andorre;Région générique pour Andorre;Andorre
+Département générique pour Belgique;Région générique pour Belgique;Belgique
+Département générique pour Royaume-Uni;Région générique pour Royaume-Uni;Royaume-Uni
+Département générique pour Territoires britanniques en Méditerranée;Région générique pour Territoires britanniques en Méditerranée;Territoires britanniques en Méditerranée
+Département générique pour Espagne;Région générique pour Espagne;Espagne
+Département générique pour Pays-Bas;Région générique pour Pays-Bas;Pays-Bas
+Département générique pour Irlande;Région générique pour Irlande;Irlande
+Département générique pour Luxembourg;Région générique pour Luxembourg;Luxembourg
+Département générique pour Monaco;Région générique pour Monaco;Monaco
+Département générique pour Portugal;Région générique pour Portugal;Portugal
+Département générique pour Suisse;Région générique pour Suisse;Suisse
+Département générique pour Malte;Région générique pour Malte;Malte
+Département générique pour Slovénie;Région générique pour Slovénie;Slovénie
+Département générique pour Biélorussie;Région générique pour Biélorussie;Biélorussie
+Département générique pour Moldavie;Région générique pour Moldavie;Moldavie
+Département générique pour Ukraine;Région générique pour Ukraine;Ukraine
+Département générique pour Macédoine du Nord;Région générique pour Macédoine du Nord;Macédoine du Nord
+Département générique pour Kosovo;Région générique pour Kosovo;Kosovo
+Département générique pour Féroé;Région générique pour Féroé;Féroé
+Département générique pour Territoires norvégiens en Atlantique Nord;Région générique pour Territoires norvégiens en Atlantique Nord;Territoires norvégiens en Atlantique Nord
+Département générique pour Åland;Région générique pour Åland;Åland
+Département générique pour Dépendances de la Couronne britannique;Région générique pour Dépendances de la Couronne britannique;Dépendances de la Couronne britannique
+Département générique pour Arabie saoudite;Région générique pour Arabie saoudite;Arabie saoudite
+Département générique pour Irak;Région générique pour Irak;Irak
+Département générique pour Iran;Région générique pour Iran;Iran
+Département générique pour Liban;Région générique pour Liban;Liban
+Département générique pour Syrie;Région générique pour Syrie;Syrie
+Département générique pour Israël;Région générique pour Israël;Israël
+Département générique pour Turquie;Région générique pour Turquie;Turquie
+Département générique pour Afghanistan;Région générique pour Afghanistan;Afghanistan
+Département générique pour Pakistan;Région générique pour Pakistan;Pakistan
+Département générique pour Bhoutan;Région générique pour Bhoutan;Bhoutan
+Département générique pour Népal;Région générique pour Népal;Népal
+Département générique pour Chine;Région générique pour Chine;Chine
+Département générique pour Japon;Région générique pour Japon;Japon
+Département générique pour Thaïlande;Région générique pour Thaïlande;Thaïlande
+Département générique pour Philippines;Région générique pour Philippines;Philippines
+Département générique pour Jordanie;Région générique pour Jordanie;Jordanie
+Département générique pour Inde;Région générique pour Inde;Inde
+Département générique pour Birmanie;Région générique pour Birmanie;Birmanie
+Département générique pour Brunei;Région générique pour Brunei;Brunei
+Département générique pour Singapour;Région générique pour Singapour;Singapour
+Département générique pour Malaisie;Région générique pour Malaisie;Malaisie
+Département générique pour Maldives;Région générique pour Maldives;Maldives
+Département générique pour Hong Kong;Région générique pour Hong Kong;Hong Kong
+Département générique pour Indonésie;Région générique pour Indonésie;Indonésie
+Département générique pour Macao;Région générique pour Macao;Macao
+Département générique pour Cambodge;Région générique pour Cambodge;Cambodge
+Département générique pour Sri Lanka;Région générique pour Sri Lanka;Sri Lanka
+Département générique pour Taïwan;Région générique pour Taïwan;Taïwan
+Département générique pour Corée du Nord;Région générique pour Corée du Nord;Corée du Nord
+Département générique pour Corée du Sud;Région générique pour Corée du Sud;Corée du Sud
+Département générique pour Koweït;Région générique pour Koweït;Koweït
+Département générique pour Laos;Région générique pour Laos;Laos
+Département générique pour Mongolie;Région générique pour Mongolie;Mongolie
+Département générique pour Vietnam;Région générique pour Vietnam;Vietnam
+Département générique pour Bangladesh;Région générique pour Bangladesh;Bangladesh
+Département générique pour Émirats arabes unis;Région générique pour Émirats arabes unis;Émirats arabes unis
+Département générique pour Qatar;Région générique pour Qatar;Qatar
+Département générique pour Bahreïn;Région générique pour Bahreïn;Bahreïn
+Département générique pour Oman;Région générique pour Oman;Oman
+Département générique pour Yémen;Région générique pour Yémen;Yémen
+Département générique pour Arménie;Région générique pour Arménie;Arménie
+Département générique pour Azerbaïdjan;Région générique pour Azerbaïdjan;Azerbaïdjan
+Département générique pour Chypre;Région générique pour Chypre;Chypre
+Département générique pour Géorgie;Région générique pour Géorgie;Géorgie
+Département générique pour Kazakhstan;Région générique pour Kazakhstan;Kazakhstan
+Département générique pour Kirghizstan;Région générique pour Kirghizstan;Kirghizstan
+Département générique pour Ouzbékistan;Région générique pour Ouzbékistan;Ouzbékistan
+Département générique pour Tadjikistan;Région générique pour Tadjikistan;Tadjikistan
+Département générique pour Turkménistan;Région générique pour Turkménistan;Turkménistan
+Département générique pour Palestine;Région générique pour Palestine;Palestine
+Département générique pour Timor oriental;Région générique pour Timor oriental;Timor oriental
+Département générique pour Territoires australiens de l’océan Indien;Région générique pour Territoires australiens de l’océan Indien;Territoires australiens de l’océan Indien
+Département générique pour Égypte;Région générique pour Égypte;Égypte
+Département générique pour Libéria;Région générique pour Libéria;Libéria
+Département générique pour Afrique du Sud;Région générique pour Afrique du Sud;Afrique du Sud
+Département générique pour Gambie;Région générique pour Gambie;Gambie
+Département générique pour Territoires britanniques de l’océan Atlantique;Région générique pour Territoires britanniques de l’océan Atlantique;Territoires britanniques de l’océan Atlantique
+Département générique pour Chagos;Région générique pour Chagos;Chagos
+Département générique pour Tanzanie;Région générique pour Tanzanie;Tanzanie
+Département générique pour Zimbabwe;Région générique pour Zimbabwe;Zimbabwe
+Département générique pour Namibie;Région générique pour Namibie;Namibie
+Département générique pour République démocratique du Congo;Région générique pour République démocratique du Congo;République démocratique du Congo
+Département générique pour Territoires espagnols en Afrique du Nord;Région générique pour Territoires espagnols en Afrique du Nord;Territoires espagnols en Afrique du Nord
+Département générique pour Guinée équatoriale;Région générique pour Guinée équatoriale;Guinée équatoriale
+Département générique pour Éthiopie;Région générique pour Éthiopie;Éthiopie
+Département générique pour Libye;Région générique pour Libye;Libye
+Département générique pour Érythrée;Région générique pour Érythrée;Érythrée
+Département générique pour Somalie;Région générique pour Somalie;Somalie
+Département générique pour Territoires portugais de l’océan Atlantique;Région générique pour Territoires portugais de l’océan Atlantique;Territoires portugais de l’océan Atlantique
+Département générique pour Burundi;Région générique pour Burundi;Burundi
+Département générique pour Cameroun;Région générique pour Cameroun;Cameroun
+Département générique pour Centrafrique;Région générique pour Centrafrique;Centrafrique
+Département générique pour Congo;Région générique pour Congo;Congo
+Département générique pour Côte d’Ivoire;Région générique pour Côte d’Ivoire;Côte d’Ivoire
+Département générique pour Bénin;Région générique pour Bénin;Bénin
+Département générique pour Gabon;Région générique pour Gabon;Gabon
+Département générique pour Ghana;Région générique pour Ghana;Ghana
+Département générique pour Guinée;Région générique pour Guinée;Guinée
+Département générique pour Burkina;Région générique pour Burkina;Burkina
+Département générique pour Kenya;Région générique pour Kenya;Kenya
+Département générique pour Madagascar;Région générique pour Madagascar;Madagascar
+Département générique pour Malawi;Région générique pour Malawi;Malawi
+Département générique pour Mali;Région générique pour Mali;Mali
+Département générique pour Mauritanie;Région générique pour Mauritanie;Mauritanie
+Département générique pour Niger;Région générique pour Niger;Niger
+Département générique pour Nigéria;Région générique pour Nigéria;Nigéria
+Département générique pour Ouganda;Région générique pour Ouganda;Ouganda
+Département générique pour Rwanda;Région générique pour Rwanda;Rwanda
+Département générique pour Sénégal;Région générique pour Sénégal;Sénégal
+Département générique pour Sierra Leone;Région générique pour Sierra Leone;Sierra Leone
+Département générique pour Soudan;Région générique pour Soudan;Soudan
+Département générique pour Tchad;Région générique pour Tchad;Tchad
+Département générique pour Togo;Région générique pour Togo;Togo
+Département générique pour Zambie;Région générique pour Zambie;Zambie
+Département générique pour Botswana;Région générique pour Botswana;Botswana
+Département générique pour Lesotho;Région générique pour Lesotho;Lesotho
+Département générique pour Soudan du Sud;Région générique pour Soudan du Sud;Soudan du Sud
+Département générique pour Maroc;Région générique pour Maroc;Maroc
+Département générique pour Tunisie;Région générique pour Tunisie;Tunisie
+Département générique pour Algérie;Région générique pour Algérie;Algérie
+Département générique pour Terres australes norvégiennes;Région générique pour Terres australes norvégiennes;Terres australes norvégiennes
+Département générique pour Sahara occidental;Région générique pour Sahara occidental;Sahara occidental
+Département générique pour Maurice;Région générique pour Maurice;Maurice
+Département générique pour Swaziland;Région générique pour Swaziland;Swaziland
+Département générique pour Guinée-Bissao;Région générique pour Guinée-Bissao;Guinée-Bissao
+Département générique pour Mozambique;Région générique pour Mozambique;Mozambique
+Département générique pour Sao Tomé-et-Principe;Région générique pour Sao Tomé-et-Principe;Sao Tomé-et-Principe
+Département générique pour Angola;Région générique pour Angola;Angola
+Département générique pour Cap-Vert;Région générique pour Cap-Vert;Cap-Vert
+Département générique pour Comores;Région générique pour Comores;Comores
+Département générique pour Seychelles;Région générique pour Seychelles;Seychelles
+Département générique pour Djibouti;Région générique pour Djibouti;Djibouti
+Département générique pour Canada;Région générique pour Canada;Canada
+Département générique pour États-Unis;Région générique pour États-Unis;États-Unis
+Département générique pour Mexique;Région générique pour Mexique;Mexique
+Département générique pour Costa Rica;Région générique pour Costa Rica;Costa Rica
+Département générique pour Cuba;Région générique pour Cuba;Cuba
+Département générique pour République dominicaine;Région générique pour République dominicaine;République dominicaine
+Département générique pour Guatemala;Région générique pour Guatemala;Guatemala
+Département générique pour Haïti;Région générique pour Haïti;Haïti
+Département générique pour Honduras;Région générique pour Honduras;Honduras
+Département générique pour Nicaragua;Région générique pour Nicaragua;Nicaragua
+Département générique pour Panama;Région générique pour Panama;Panama
+Département générique pour Salvador;Région générique pour Salvador;Salvador
+Département générique pour Argentine;Région générique pour Argentine;Argentine
+Département générique pour Brésil;Région générique pour Brésil;Brésil
+Département générique pour Chili;Région générique pour Chili;Chili
+Département générique pour Bolivie;Région générique pour Bolivie;Bolivie
+Département générique pour Colombie;Région générique pour Colombie;Colombie
+Département générique pour Équateur;Région générique pour Équateur;Équateur
+Département générique pour Paraguay;Région générique pour Paraguay;Paraguay
+Département générique pour Pérou;Région générique pour Pérou;Pérou
+Département générique pour Uruguay;Région générique pour Uruguay;Uruguay
+Département générique pour Vénézuéla;Région générique pour Vénézuéla;Vénézuéla
+Département générique pour Territoires britanniques dans les Antilles et Bermudes;Région générique pour Territoires britanniques dans les Antilles et Bermudes;Territoires britanniques dans les Antilles et Bermudes
+Département générique pour Jamaïque;Région générique pour Jamaïque;Jamaïque
+Département générique pour Territoires britanniques dans l’océan Atlantique Sud;Région générique pour Territoires britanniques dans l’océan Atlantique Sud;Territoires britanniques dans l’océan Atlantique Sud
+Département générique pour Guyana;Région générique pour Guyana;Guyana
+Département générique pour Bélize;Région générique pour Bélize;Bélize
+Département générique pour Groenland;Région générique pour Groenland;Groenland
+Département générique pour Aruba;Région générique pour Aruba;Aruba
+Département générique pour Territoires des États-Unis en Amérique;Région générique pour Territoires des États-Unis en Amérique;Territoires des États-Unis en Amérique
+Département générique pour Trinité-et-Tobago;Région générique pour Trinité-et-Tobago;Trinité-et-Tobago
+Département générique pour Barbade;Région générique pour Barbade;Barbade
+Département générique pour Grenade;Région générique pour Grenade;Grenade
+Département générique pour Bahamas;Région générique pour Bahamas;Bahamas
+Département générique pour Suriname;Région générique pour Suriname;Suriname
+Département générique pour Dominique;Région générique pour Dominique;Dominique
+Département générique pour Sainte-Lucie;Région générique pour Sainte-Lucie;Sainte-Lucie
+Département générique pour Saint-Vincent-et-les-Grenadines;Région générique pour Saint-Vincent-et-les-Grenadines;Saint-Vincent-et-les-Grenadines
+Département générique pour Antigua-et-Barbuda;Région générique pour Antigua-et-Barbuda;Antigua-et-Barbuda
+Département générique pour Saint-Christophe-et-Niévès;Région générique pour Saint-Christophe-et-Niévès;Saint-Christophe-et-Niévès
+Département générique pour Bonaire, Saint-Eustache, Saba;Région générique pour Bonaire, Saint-Eustache, Saba;Bonaire, Saint-Eustache, Saba
+Département générique pour Curaçao;Région générique pour Curaçao;Curaçao
+Département générique pour Saint-Martin (partie néerlandaise);Région générique pour Saint-Martin (partie néerlandaise);Saint-Martin (partie néerlandaise)
+Département générique pour Antarctique argentin;Région générique pour Antarctique argentin;Antarctique argentin
+Département générique pour Territoire chilien de l’Antarctique;Région générique pour Territoire chilien de l’Antarctique;Territoire chilien de l’Antarctique
+Département générique pour Australie;Région générique pour Australie;Australie
+Département générique pour Nouvelle-Zélande;Région générique pour Nouvelle-Zélande;Nouvelle-Zélande
+Département générique pour Pitcairn;Région générique pour Pitcairn;Pitcairn
+Département générique pour Territoires des États-Unis en Océanie;Région générique pour Territoires des États-Unis en Océanie;Territoires des États-Unis en Océanie
+Département générique pour Samoa;Région générique pour Samoa;Samoa
+Département générique pour Nauru;Région générique pour Nauru;Nauru
+Département générique pour Fidji;Région générique pour Fidji;Fidji
+Département générique pour Tonga;Région générique pour Tonga;Tonga
+Département générique pour Papouasie-Nouvelle-Guinée;Région générique pour Papouasie-Nouvelle-Guinée;Papouasie-Nouvelle-Guinée
+Département générique pour Tuvalu;Région générique pour Tuvalu;Tuvalu
+Département générique pour Salomon;Région générique pour Salomon;Salomon
+Département générique pour Kiribati;Région générique pour Kiribati;Kiribati
+Département générique pour Vanuatu;Région générique pour Vanuatu;Vanuatu
+Département générique pour Marshall;Région générique pour Marshall;Marshall
+Département générique pour Micronésie;Région générique pour Micronésie;Micronésie
+Département générique pour Palaos;Région générique pour Palaos;Palaos
+Département générique pour Territoires de la Nouvelle-Zélande;Région générique pour Territoires de la Nouvelle-Zélande;Territoires de la Nouvelle-Zélande
+Département générique pour Cook;Région générique pour Cook;Cook
+Département générique pour Niue;Région générique pour Niue;Niue
+Département générique pour Territoires de l’Australie en Océanie;Région générique pour Territoires de l’Australie en Océanie;Territoires de l’Australie en Océanie
+Département générique pour Antarctique;Région générique pour Antarctique;Antarctique

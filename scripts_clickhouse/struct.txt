@@ -1,0 +1,22 @@
+  ┌─name─────────────────────────────────┐
+ 1. │ activite_dim                         │
+ 2. │ categorie_entreprise_dim             │
+ 3. │ categorie_juridique_dim              │
+ 4. │ classe_activite_dim                  │
+ 5. │ classe_categorie_juridique_dim       │
+ 6. │ data_periode                         │
+ 7. │ departement_dim                      │
+ 8. │ division_activite_dim                │
+ 9. │ etablissement                        │
+10. │ etablissement_actif_date_stats       │
+11. │ etablissement_actif_stats            │
+12. │ etablissement_date_stats             │
+13. │ etablissement_stats                  │
+14. │ groupe_activite_dim                  │
+15. │ pays_dim                             │
+16. │ region_dim                           │
+17. │ section_activite_dim                 │
+18. │ super_classe_categorie_juridique_dim │
+19. │ tranche_effectif_dim                 │
+    └──────────────────────────────────────┘
+

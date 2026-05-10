@@ -1,0 +1,12 @@
+truncate table section_activite_dim;
+truncate table division_activite_dim;
+truncate table groupe_activite_dim;
+truncate table classe_activite_dim;
+truncate table activite_dim;
+truncate table super_classe_categorie_juridique_dim;
+truncate table classe_categorie_juridique_dim;
+truncate table categorie_juridique_dim;
+truncate table pays_dim;
+truncate table region_dim;
+truncate table departement_dim;
+truncate table tranche_effectif_dim;

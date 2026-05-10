@@ -1,0 +1,49 @@
+/* Tout en blanc */
+.login-pf body,
+body,
+html {
+    background-image: none !important;
+    background-color: #ffffff !important;
+}
+
+/* Zone header logo en blanc */
+#kc-header,
+#kc-header-wrapper {
+    background-color: #ffffff !important;
+    background-image: url('../img/statorix_logo.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 620px auto !important;
+    color: transparent !important;
+    height: 80px !important;
+}
+
+/* Carte du formulaire */
+#kc-content,
+#kc-content-wrapper {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    background-color: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    padding: 24px !important;
+}
+
+/* Centrer le conteneur principal */
+#kc-container-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+    background-color: #ffffff !important;
+}
+
+/* Footer en blanc */
+#kc-info,
+.login-pf-page .login-pf-footer {
+    background-color: #ffffff !important;
+}
+
+.pf-c-form__label {
+    font-size: 18px;
+}

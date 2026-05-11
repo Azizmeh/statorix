@@ -1,0 +1,2 @@
+docker compose up --build superset -d
+docker compose up nginx -d

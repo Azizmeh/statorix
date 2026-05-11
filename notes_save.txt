@@ -1,0 +1,1 @@
+zip -r statorix.zip statorix -x "statorix/data/*"

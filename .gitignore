@@ -1,0 +1,159 @@
+# =====================================================
+# Projet Statorix / Superset / Keycloak / Docker
+# =====================================================
+
+# =========================
+# Données applicatives
+# =========================
+data/
+*/data/
+uploads/
+storage/
+tmp/
+temp/
+
+# =========================
+# Variables d'environnement
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Secrets / certificats
+# =========================
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+id_rsa
+id_ed25519
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Python / Superset
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environnements virtuels
+venv/
+.venv/
+env/
+
+# Build Python
+build/
+dist/
+*.egg-info/
+
+# Tests / couverture
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =========================
+# Superset
+# =========================
+superset.db
+superset_config.pyc
+
+# Cache Superset
+.cache/
+
+# =========================
+# Node.js / Frontend
+# =========================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Build frontend
+.next/
+.nuxt/
+dist/
+coverage/
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+*.tar
+
+# Volumes Docker locaux
+docker-data/
+postgres-data/
+redis-data/
+
+# =========================
+# Base de données
+# =========================
+*.sqlite
+*.db
+
+# PostgreSQL dumps
+*.sql
+*.dump
+
+# =========================
+# Keycloak
+# =========================
+keycloak/data/
+keycloak/tmp/
+keycloak/log/
+keycloak/themes/*/node_modules/
+
+# Exports realm
+realm-export.json
+realm-export-*.json
+
+# =========================
+# IDE / éditeurs
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# Système
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archives
+# =========================
+*.zip
+*.tar.gz
+*.rar
+
+# =========================
+# Fichiers temporaires
+# =========================
+*.tmp
+*.bak
+*~
+
+# =========================
+# Terraform / infra
+# =========================
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# =========================
+# Kubernetes
+# =========================
+kubeconfig

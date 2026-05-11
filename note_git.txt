@@ -9,7 +9,7 @@ git push --set-upstream origin master
 
 Pour ajouter les fichiers modifiés:
 git add -A
-git commit -m "commit"
+git commit -m "commentaire"
 git push
 
 pour le revert

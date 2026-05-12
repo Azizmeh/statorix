@@ -1,2 +1,24 @@
 docker compose up --build superset -d
 docker compose up nginx -d
+
+docker exec -it superset bash
+docker compose build --no-cache
+docker logs -f superset
+
+
+install langue
+
+build de superset pour intégrer les langues
+cd ~/statorix/superset
+docker build --build-arg BUILD_TRANSLATIONS=true -t superset:6.0.0-custom .
+
+copier messages.po message.mo messages.json dans le projet statorix
+mkdir ~/statorix/superset/translations/fr/LC_MESSAGES
+cd /tmp/superset/superset/translations/fr/LC_MESSAGES/* ~/statorix/superset/translations/fr/LC_MESSAGES
+
+afficher le contenu d'un repertoire dans un depot docker
+docker exec -it superset_app ls /app/superset/translations/fr/LC_MESSAGES
+
+l'anglais supprimé dans superset_config.py
+"en": {"flag": "us", "name": "English"},
+

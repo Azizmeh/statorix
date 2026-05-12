@@ -20,6 +20,7 @@ COPY init.sh /app/init.sh
 COPY statorix_logo.svg /app/superset/static/assets/images/statorix_logo.svg
 COPY statorix_logo_dark.svg /app/superset/static/assets/images/statorix_logo_dark.svg
 COPY statorix_icon.svg /app/superset/static/assets/images/statorix_icon.svg
+COPY translations/fr /app/superset/translations/fr
 
 RUN chmod +x /app/init.sh
 

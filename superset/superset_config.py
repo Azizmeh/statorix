@@ -15,6 +15,7 @@ FEATURE_FLAGS = {
 }
 
 BABEL_DEFAULT_LOCALE = "fr"
+
 LANGUAGES = {
     "fr": {"flag": "fr", "name": "French"},
 }
@@ -151,3 +152,13 @@ ENABLE_CORS = True
 SESSION_COOKIE_DOMAIN = "localhost"
 SESSION_COOKIE_SAMESITE = "Lax"
 SESSION_COOKIE_SECURE = False
+
+from superset.translations.utils import get_language_pack
+
+def override_bootstrap_locale(data):
+    if data.get("locale") == "fr":
+        data["locale"] = "fr"
+        data["language_pack"] = get_language_pack("fr")
+    return data
+
+COMMON_BOOTSTRAP_OVERRIDES_FUNC = override_bootstrap_locale

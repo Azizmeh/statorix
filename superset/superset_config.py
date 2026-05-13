@@ -81,7 +81,8 @@ def init_app(app):
     @app.before_request
     def auto_redirect_to_keycloak():
         if request.path == "/login/" and "next" in request.args:
-            return redirect("/login/keycloak")
+            next_url = request.args.get("next", "")
+            return redirect(f"/login/keycloak?next={next_url}")
 
     @app.before_request
     def redirect_viewer_to_dashboards():
@@ -90,6 +91,10 @@ def init_app(app):
                 from flask_login import current_user
                 if current_user.is_authenticated:
                     roles = [r.name for r in current_user.roles]
+                    # Ne pas rediriger si un 'next' est en attente
+                    next_url = request.args.get("next") or session.get("_next")
+                    if next_url:
+                        return None  # laisser Superset gérer la redirection
                     if "Viewer" in roles and "Admin" not in roles:
                         return redirect("/dashboard/list/")
             except Exception:
@@ -108,6 +113,11 @@ def init_app(app):
             return redirect(keycloak_logout_url)
         return response
 
+    @app.after_request
+    def clear_flash_on_login(response):
+        if request.path.startswith("/oauth-authorized/") and response.status_code == 302:
+            session.pop('_flashes', None)
+        return response
 
 FLASK_APP_MUTATOR = init_app
 

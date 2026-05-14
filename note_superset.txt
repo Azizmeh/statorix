@@ -1,24 +1,50 @@
+# build et démarre superset
 docker compose up --build superset -d
+
+# démarrer tous les contenaires
+docker compose up -d
+
+# arrêter tous les contenaires 
+docker compose down
+
+# arrêter un contenaire docker, exemple superset
+docker stop superset
+
+# démarrer nginx
 docker compose up nginx -d
 
+# se connecter à superset dans docker 
 docker exec -it superset bash
+
+# build de tous les contenaires dans docker
 docker compose build --no-cache
+
+# afficher la log superset
 docker logs -f superset
 
 
-install langue
+# install langue dans superset
 
-build de superset pour intégrer les langues
+# build de superset pour intégrer les langues
+
 cd ~/statorix/superset
 docker build --build-arg BUILD_TRANSLATIONS=true -t superset:6.0.0-custom .
 
-copier messages.po message.mo messages.json dans le projet statorix
-mkdir ~/statorix/superset/translations/fr/LC_MESSAGES
-cd /tmp/superset/superset/translations/fr/LC_MESSAGES/* ~/statorix/superset/translations/fr/LC_MESSAGES
+# récupérer le dépot superset v 6.0.0 dans /tmp
+?
 
-afficher le contenu d'un repertoire dans un depot docker
+# compiler messages.po avec pylabel
+?
+
+# copier messages.po message.mo messages.json dans le projet statorix
+mkdir ~/statorix/superset/translations/fr/LC_MESSAGES
+cp /tmp/superset/superset/translations/fr/LC_MESSAGES/* ~/statorix/superset/translations/fr/LC_MESSAGES
+
+# afficher le contenu d'un repertoire dans un depot docker (exemple)
 docker exec -it superset_app ls /app/superset/translations/fr/LC_MESSAGES
 
-l'anglais supprimé dans superset_config.py
+# garder que le français dans superset, supprimer la ligne ci-dessous dans superset_config.py
 "en": {"flag": "us", "name": "English"},
+
+
 

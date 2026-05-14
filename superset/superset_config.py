@@ -7,7 +7,7 @@ from superset.security import SupersetSecurityManager
 SECRET_KEY = "9CtcsF0Oil72+Ty8VvjVXmpy0YhWUQr78HrBtB85oOzYJo0GiCib81q5"
 
 SQLALCHEMY_DATABASE_URI = (
-    "postgresql+psycopg2://statorix:statorix_pwd@postgres:5432/statorix"
+    "postgresql+psycopg2://superset:nouveau_mot_de_passe@postgres:5432/superset"
 )
 
 FEATURE_FLAGS = {

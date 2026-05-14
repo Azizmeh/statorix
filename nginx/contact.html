@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statorix - Contact</title>
+
+    <link rel="icon" type="image/svg+xml" href="/statorix_icon.svg">
+    <link rel="stylesheet" href="/statorix.css">
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-row label {
+            font-weight: 600;
+        }
+
+        .form-row input,
+        .form-row textarea {
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .form-row textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: #1d4ed8;
+        }
+
+        .required {
+            color: #dc2626;
+        }
+
+        .message-box {
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .message-success {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .message-error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="/index.html">
+            <img src="/statorix_logo.svg" width="350" alt="Statorix Logo">
+        </a>
+
+        <div id="auth-zone">
+            <a class="btn-connect" href="http://localhost:8088/login/keycloak">
+                Se connecter
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div style="max-width:700px; margin:0 auto;">
+
+            <div class="card">
+
+                <h2>Contact</h2>
+
+                <p>
+                    Vous pouvez utiliser ce formulaire pour contacter Statorix.
+                </p>
+
+                <div id="success-message" class="message-box message-success">
+                    Votre message a été envoyé avec succès.
+                </div>
+
+                <div id="error-message" class="message-box message-error">
+                    Une erreur est survenue lors de l’envoi du message.
+                </div>
+
+                <form id="contact-form" class="contact-form">
+
+                    <div class="form-row">
+                        <label>
+                            Nom
+                            <span class="required">*</span>
+                        </label>
+
+                        <input type="text" name="nom" required maxlength="100">
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            Prénom
+                            <span class="required">*</span>
+                        </label>
+
+                        <input type="text" name="prenom" required maxlength="100">
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            Adresse mail
+                            <span class="required">*</span>
+                        </label>
+
+                        <input type="email" name="email" required maxlength="255">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Téléphone</label>
+
+                        <input type="text" name="telephone" maxlength="50">
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            Votre message
+                            <span class="required">*</span>
+                        </label>
+
+                        <textarea name="message" required maxlength="5000"></textarea>
+                    </div>
+
+                    <!-- Honeypot anti-bot -->
+                    <input type="text" name="website" style="display:none">
+
+                    <!-- Captcha -->
+                    <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA">
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Envoyer
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="http://localhost/infos_donnees.html">
+            Informations sur les données
+        </a>
+        |
+        <a href="http://localhost/contact.html">
+            Contact
+        </a>
+    </footer>
+
+    <script>
+
+        // Gestion connexion utilisateur
+        fetch('/superset-api/v1/me/', { credentials: 'include' })
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.result && data.result.username) {
+                    const user = data.result;
+
+                    const name =
+                        (user.first_name + ' ' + user.last_name).trim()
+                        || user.username;
+
+                    document.getElementById('auth-zone').innerHTML = `
+                        <span>👤 ${name}</span>
+                        <a class="btn-logout"
+                           href="http://localhost:8088/logout/">
+                           Se déconnecter
+                        </a>
+                    `;
+                }
+            })
+            .catch(() => { });
+
+        // Envoi formulaire
+        document
+            .getElementById('contact-form')
+            .addEventListener('submit', async (e) => {
+
+                e.preventDefault();
+
+                const form = e.target;
+
+                const formData = new FormData(form);
+
+                const payload = {
+                    nom: formData.get('nom'),
+                    prenom: formData.get('prenom'),
+                    email: formData.get('email'),
+                    telephone: formData.get('telephone'),
+                    message: formData.get('message'),
+                    website: formData.get('website'),
+                    captcha: formData.get('cf-turnstile-response')
+                };
+
+                document.getElementById('success-message')
+                    .style.display = 'none';
+
+                document.getElementById('error-message')
+                    .style.display = 'none';
+
+                try {
+
+                    const response = await fetch(
+                        '/api/contact',
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(payload)
+                        }
+                    );
+
+                    if (!response.ok) {
+                        throw new Error();
+                    }
+
+                    form.reset();
+
+                    document.getElementById('success-message')
+                        .style.display = 'block';
+
+                } catch (err) {
+
+                    document.getElementById('error-message')
+                        .style.display = 'block';
+                }
+            });
+
+    </script>
+
+</body>
+
+</html>

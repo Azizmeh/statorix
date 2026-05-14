@@ -1,0 +1,17 @@
+# se connecter à postgres dans docker
+docker exec -it postgres bash
+
+# se connecter à la base statorix avec le user statorix
+psql -d statorix -U statorix
+
+# se connecter à la base keycloak avec le user keycloak
+psql -d keycloak -U keycloak
+
+# lister les bases dans postgres
+\list
+
+Afficher la liste des tables
+\dt ou \d
+
+#afficher les roles/usres
+\du

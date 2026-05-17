@@ -1,0 +1,2 @@
+# se connecter à la base statorix
+docker exec -it clickhouse clickhouse-client --user admin --password 'ERmpl??784' --database statorix

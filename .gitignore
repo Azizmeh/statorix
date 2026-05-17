@@ -6,6 +6,7 @@
 # Données applicatives
 # =========================
 data/
+data_sirene/
 */data/
 uploads/
 storage/
@@ -35,6 +36,7 @@ id_ed25519
 # =========================
 logs/
 *.log
+scripts_postgres/logs/
 
 # =========================
 # Python / Superset

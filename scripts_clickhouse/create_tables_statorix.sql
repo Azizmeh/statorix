@@ -104,6 +104,7 @@ CREATE TABLE etablissement
     groupeActivite LowCardinality(String),
     divisionActivite LowCardinality(String),
     sectionActivite LowCardinality(String),
+    activiteUniteLegale LowCardinality(String),
 
     categorieJuridique LowCardinality(String),
     classeCategorieJuridique LowCardinality(String),
@@ -134,6 +135,7 @@ CREATE TABLE etablissement_actif_date_stats
     groupeActivite LowCardinality(String),
     divisionActivite LowCardinality(String),
     sectionActivite LowCardinality(String),
+    activiteUniteLegale LowCardinality(String),
 
     categorieJuridique LowCardinality(String),
     classeCategorieJuridique LowCardinality(String),
@@ -168,6 +170,7 @@ CREATE TABLE etablissement_actif_stats
     groupeActivite LowCardinality(String),
     divisionActivite LowCardinality(String),
     sectionActivite LowCardinality(String),
+    activiteUniteLegale LowCardinality(String),
 
     categorieJuridique LowCardinality(String),
     classeCategorieJuridique LowCardinality(String),
@@ -202,6 +205,7 @@ CREATE TABLE etablissement_stats
     groupeActivite LowCardinality(String),
     divisionActivite LowCardinality(String),
     sectionActivite LowCardinality(String),
+    activiteUniteLegale LowCardinality(String),
 
     categorieJuridique LowCardinality(String),
     classeCategorieJuridique LowCardinality(String),

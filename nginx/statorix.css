@@ -67,6 +67,18 @@ header a.btn-connect:hover {
     background-color: #d1d5db;
 }
 
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-center a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 /* ── Contenu principal ── */
 .container {
     max-width: 1060px;

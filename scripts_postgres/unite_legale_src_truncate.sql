@@ -1,0 +1,1 @@
+truncate table etablissement_src cascade;

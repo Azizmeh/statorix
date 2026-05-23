@@ -1,0 +1,1 @@
+DROP TABLE unite_legale_src cascade;

@@ -83,66 +83,62 @@ CREATE TABLE etablissement
     siret String,
     etat LowCardinality(String),
 
-    dateCreation Date,
-    anneeCreation UInt16,
-    moisCreation UInt8,
+    dateCreationEtablissement Date,
+    anneeCreationEtablissement UInt16,
+    moisCreationEtablissement UInt8,
 
-    trancheEffectif LowCardinality(String),
+    trancheEffectifsEtablissement LowCardinality(String),
+    trancheEffectifsUniteLegale LowCardinality(String),
     etablissementSiege UInt8,
 
-    codePostal String,
-    codeCommune String,
-    commune LowCardinality(String),
-    codeDepartement LowCardinality(String),
-    departement LowCardinality(String),
-    codeRegion LowCardinality(String),
-    region LowCardinality(String),
-    pays LowCardinality(String),
+    codePostalEtablissement String,
+    codeCommuneEtablissement String,
+    communeEtablissement LowCardinality(String),
+    codeDepartementEtablissement LowCardinality(String),
+    departementEtablissement LowCardinality(String),
+    codeRegionEtablissement LowCardinality(String),
+    regionEtablissement LowCardinality(String),
+    paysEtablissement LowCardinality(String),
 
-    activite LowCardinality(String),
-    classeActivite LowCardinality(String),
-    groupeActivite LowCardinality(String),
-    divisionActivite LowCardinality(String),
-    sectionActivite LowCardinality(String),
-    activiteUniteLegale LowCardinality(String),
+    activitePrincipaleEtablissement LowCardinality(String),
+    sectionActivitePrincipaleEtablissement LowCardinality(String),
+    activitePrincipaleUniteLegale LowCardinality(String),
+    sectionActivitePrincipaleUniteLegale LowCardinality(String),
 
-    categorieJuridique LowCardinality(String),
-    classeCategorieJuridique LowCardinality(String),
-    superClasseCategorieJuridique LowCardinality(String),
+    categorieJuridiqueUniteLegale LowCardinality(String),
+    classeCategorieJuridiqueUniteLegale LowCardinality(String),
 
     categorieEntreprise LowCardinality(String),
 
-    dateCloture Nullable(Date),
-    anneeCloture Nullable(UInt16),
-    moisCloture Nullable(UInt8)
+    dateClotureEtablissement Nullable(Date),
+    anneeClotureEtablissement Nullable(UInt16),
+    moisClotureEtablissement Nullable(UInt8)
 )
 ENGINE = MergeTree
-ORDER BY (dateCreation)
+ORDER BY (dateCreationEtablissement)
 SETTINGS index_granularity = 8192;
 
 CREATE TABLE etablissement_actif_date_stats
 (
     date Date,
     etablissementSiege Bool,
-    codeDepartement LowCardinality(String),
-    departement LowCardinality(String),
-    codeRegion LowCardinality(String),
-    region LowCardinality(String),
-    pays LowCardinality(String),
+    codeDepartementEtablissement LowCardinality(String),
+    departementEtablissement LowCardinality(String),
+    codeRegionEtablissement LowCardinality(String),
+    regionEtablissement LowCardinality(String),
+    paysEtablissement LowCardinality(String),
 
-    activite LowCardinality(String),
-    classeActivite LowCardinality(String),
-    groupeActivite LowCardinality(String),
-    divisionActivite LowCardinality(String),
-    sectionActivite LowCardinality(String),
-    activiteUniteLegale LowCardinality(String),
+    activitePrincipaleEtablissement LowCardinality(String),
+    sectionActivitePrincipaleEtablissement LowCardinality(String),
+    activitePrincipaleUniteLegale LowCardinality(String),
+    sectionActivitePrincipaleUniteLegale LowCardinality(String),
 
-    categorieJuridique LowCardinality(String),
-    classeCategorieJuridique LowCardinality(String),
-    superClasseCategorieJuridique LowCardinality(String),
+    categorieJuridiqueUniteLegale LowCardinality(String),
+    classeCategorieJuridiqueUniteLegale LowCardinality(String),
 
     categorieEntreprise LowCardinality(String),
-    trancheEffectif LowCardinality(String),
+    trancheEffectifsEtablissement LowCardinality(String),
+    trancheEffectifsUniteLegale LowCardinality(String),
 
     nbActifs UInt32
 )
@@ -150,69 +146,65 @@ ENGINE = MergeTree()
 PARTITION BY toYear(date)
 ORDER BY (
     date,
-    pays,
-    activite,
-    region,
-    departement
+    paysEtablissement,
+    activitePrincipaleEtablissement,
+    regionEtablissement,
+    departementEtablissement
 );
 
 CREATE TABLE etablissement_actif_stats
 (
     etablissementSiege Bool,
-    codeDepartement LowCardinality(String),
-    departement LowCardinality(String),
-    codeRegion LowCardinality(String),
-    region LowCardinality(String),
-    pays LowCardinality(String),
+    codeDepartementEtablissement LowCardinality(String),
+    departementEtablissement LowCardinality(String),
+    codeRegionEtablissement LowCardinality(String),
+    regionEtablissement LowCardinality(String),
+    paysEtablissement LowCardinality(String),
 
-    activite LowCardinality(String),
-    classeActivite LowCardinality(String),
-    groupeActivite LowCardinality(String),
-    divisionActivite LowCardinality(String),
-    sectionActivite LowCardinality(String),
-    activiteUniteLegale LowCardinality(String),
+    activitePrincipaleEtablissement LowCardinality(String),
+    sectionActivitePrincipaleEtablissement LowCardinality(String),
+    activitePrincipaleUniteLegale LowCardinality(String),
+    sectionActivitePrincipaleUniteLegale LowCardinality(String),
 
-    categorieJuridique LowCardinality(String),
-    classeCategorieJuridique LowCardinality(String),
-    superClasseCategorieJuridique LowCardinality(String),
+    categorieJuridiqueUniteLegale LowCardinality(String),
+    classeCategorieJuridiqueUniteLegale LowCardinality(String),
 
     categorieEntreprise LowCardinality(String),
-    trancheEffectif LowCardinality(String),
+    trancheEffectifsEtablissement LowCardinality(String),
+    trancheEffectifsUniteLegale LowCardinality(String),
 
     nbActifs UInt32
 )
 ENGINE = MergeTree()
 ORDER BY (
-    pays,
-    activite,
-    region,
-    departement
+    paysEtablissement,
+    activitePrincipaleEtablissement,
+    regionEtablissement,
+    departementEtablissement
 );
 
-CREATE TABLE etablissement_stats
+CREATE TABLE etablissement_event_stats
 (
     date Date,
     type LowCardinality(String),
     etablissementSiege Bool,
-    codeDepartement LowCardinality(String),
-    departement LowCardinality(String),
-    codeRegion LowCardinality(String),
-    region LowCardinality(String),
-    pays LowCardinality(String),
+    codeDepartementEtablissement LowCardinality(String),
+    departementEtablissement LowCardinality(String),
+    codeRegionEtablissement LowCardinality(String),
+    regionEtablissement LowCardinality(String),
+    paysEtablissement LowCardinality(String),
 
-    activite LowCardinality(String),
-    classeActivite LowCardinality(String),
-    groupeActivite LowCardinality(String),
-    divisionActivite LowCardinality(String),
-    sectionActivite LowCardinality(String),
-    activiteUniteLegale LowCardinality(String),
+    activitePrincipaleEtablissement LowCardinality(String),
+    sectionActivitePrincipaleEtablissement LowCardinality(String),
+    activitePrincipaleUniteLegale LowCardinality(String),
+    sectionActivitePrincipaleUniteLegale LowCardinality(String),
 
-    categorieJuridique LowCardinality(String),
-    classeCategorieJuridique LowCardinality(String),
-    superClasseCategorieJuridique LowCardinality(String),
+    categorieJuridiqueUniteLegale LowCardinality(String),
+    classeCategorieJuridiqueUniteLegale LowCardinality(String),
 
     categorieEntreprise LowCardinality(String),
-    trancheEffectif LowCardinality(String),
+    trancheEffectifsEtablissement LowCardinality(String),
+    trancheEffectifsUniteLegale LowCardinality(String),
 
     nb UInt32
 )
@@ -220,8 +212,8 @@ ENGINE = SummingMergeTree()
 ORDER BY (
     date,
     type,
-    region,
-    departement,
-    activite
+    regionEtablissement,
+    departementEtablissement,
+    activitePrincipaleEtablissement
 );
 

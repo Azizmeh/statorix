@@ -1,0 +1,1 @@
+DROP TABLE etablissement_historique_src cascade;
